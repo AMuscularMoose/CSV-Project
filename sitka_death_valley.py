@@ -68,26 +68,26 @@ fig = plt.figure()
 
 fig,ax = plt.subplots(2)
 
-plt.plot(dates, highs, c="red")
-plt.plot(dates, lows, c="blue")
+ax[0].plot(dates, highs, c="red")
+ax[0].plot(dates, lows, c="blue")
 
-plt.fill_between(dates, highs, lows, facecolor='blue',alpha=.1)
+ax[0].fill_between(dates, highs, lows, facecolor='blue',alpha=.1)
 
-plt.title(title, fontsize=16)
-plt.xlabel("", fontsize=12)
-plt.ylabel("Temperature (F)", fontsize=12)
-plt.tick_params(axis="both", labelsize=12)
+ax[0].title(title, fontsize=16)
+ax[0].xlabel("", fontsize=12)
+ax[0].ylabel("Temperature (F)", fontsize=12)
+ax[0].tick_params(axis="both", labelsize=12)
 
 
-plt.plot(dates2, highs2, c="red")
-plt.plot(dates2, lows2, c="blue")
+ax[1].plot(dates2, highs2, c="red")
+ax[1].plot(dates2, lows2, c="blue")
 
-plt.fill_between(dates2, highs2, lows2, facecolor='blue',alpha=.1)
+ax[1].fill_between(dates2, highs2, lows2, facecolor='blue',alpha=.1)
 
-plt.title(title2, fontsize=16)
-plt.xlabel("", fontsize=12)
-plt.ylabel("Temperature (F)", fontsize=12)
-plt.tick_params(axis="both", labelsize=12)
+ax[1].title(title2, fontsize=16)
+ax[1].xlabel("", fontsize=12)
+ax[1].ylabel("Temperature (F)", fontsize=12)
+ax[1].tick_params(axis="both", labelsize=12)
 
 fig.autofmt_xdate()
 

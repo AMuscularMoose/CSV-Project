@@ -14,7 +14,7 @@ header_row = next(csv_file)
     #skip the first record since the first row is just the header
 print(type(header_row))
 
-#The enumerate() function returns both the index of each item and the value of each
+#The enumerate() function returns both the index of each iteam and the value of each
 # item as you loop through a list
 
 for index, column_header in enumerate(header_row):
