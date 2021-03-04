@@ -64,8 +64,6 @@ import matplotlib.pyplot as plt
 
 fig = plt.figure()
 
-
-
 fig,ax = plt.subplots(2)
 
 ax[0].plot(dates, highs, c="red")
@@ -73,9 +71,9 @@ ax[0].plot(dates, lows, c="blue")
 
 ax[0].fill_between(dates, highs, lows, facecolor='blue',alpha=.1)
 
-ax[0].title(title, fontsize=16)
-ax[0].xlabel("", fontsize=12)
-ax[0].ylabel("Temperature (F)", fontsize=12)
+ax[0].set_title(title, fontsize=16)
+ax[0].set_xlabel("", fontsize=12)
+ax[0].set_ylabel("Temperature (F)", fontsize=12)
 ax[0].tick_params(axis="both", labelsize=12)
 
 
@@ -84,9 +82,9 @@ ax[1].plot(dates2, lows2, c="blue")
 
 ax[1].fill_between(dates2, highs2, lows2, facecolor='blue',alpha=.1)
 
-ax[1].title(title2, fontsize=16)
-ax[1].xlabel("", fontsize=12)
-ax[1].ylabel("Temperature (F)", fontsize=12)
+ax[1].set_title(title2, fontsize=16)
+ax[1].set_xlabel("", fontsize=12)
+ax[1].set_ylabel("Temperature (F)", fontsize=12)
 ax[1].tick_params(axis="both", labelsize=12)
 
 fig.autofmt_xdate()
